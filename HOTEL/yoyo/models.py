@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 # Create your models here.
 
@@ -31,4 +32,13 @@ class Room(models.Model):
 
     def __str__(self):
         return f'{self.number} with {self.types} & {self.beds} bed , {self.capacity} person need {self.meals}'    # F is a new format to represent the string
+    
+class Bookings(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
+    room = models.ForeignKey(Room, on_delete = models.CASCADE)
+    check_in = models.DateTimeField()
+    check_out = models.DateTimeField()
+
+    def __str__(self):
+        return f'{self.user} room {self.room} enter {self.check_in} & out {self.check_out}'
     
