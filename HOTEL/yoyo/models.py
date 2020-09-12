@@ -40,5 +40,5 @@ class Bookings(models.Model):
     check_out = models.DateTimeField()
 
     def __str__(self):
-        return f'{self.user} room {self.room} enter {self.check_in} & out {self.check_out}'
+        return f'{self.user} room {self.room} enter {self.check_in.strftime('%d-%h-%y')} & out {self.check_out.strftime('%d-%h-%y')}'
     
