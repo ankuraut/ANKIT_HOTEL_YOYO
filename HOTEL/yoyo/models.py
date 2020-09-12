@@ -33,7 +33,7 @@ class Room(models.Model):
     def __str__(self):
         return f'{self.number} with {self.types} & {self.beds} bed , {self.capacity} person need {self.meals}'    # F is a new format to represent the string
     
-class Bookings(models.Model):
+class Booking(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
     room = models.ForeignKey(Room, on_delete = models.CASCADE)
     check_in = models.DateTimeField()
