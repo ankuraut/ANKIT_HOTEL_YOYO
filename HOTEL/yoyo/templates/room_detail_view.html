@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOYO</title>
+    <script src="https://kit.fontawesome.com/692189991f.js" crossorigin="anonymous"></script>
+
+    <!-- Main StyleSheet -->
+    <link rel="stylesheet" href="{% static 'yoyo/css/detail.css' %}">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRWh6fIOmMsKjD-uVgtnvL1M-QoOrGg22ScA&usqp=CAU" type="image/icon"> <!--my icon-->
+</head>
+
+<body>
+
+    <!-- Main Content -->
+    <div class="content">
+
+        <!-- Room Image -->
+        <div class="image">
+            <img
+                src="https://pix10.agoda.net/hotelImages/854/8548/8548_17012015240050443923.jpg?s=1024x768">
+        </div>
+
+        <!-- Room Details -->
+        <div class="room">
+
+            <!-- Div 1: Back to Home -->
+            <div class="home">
+                <a href="{% url 'hotel:RoomList' %}"><i class="fas fa-arrow-alt-circle-left"> Home</i></a>
+            </div>
+
+            <!-- Div 2: Room Information -->
+            <div class="room-info">
+                <h1>{{room_type}}</h1>
+                <p>On entering this charming hotel in Florence, you will immediately sense its special intimate atmosphere that makes you
+                feel like being in your own florentine home. Each detail has been passionately chosen and each room deserves a visit.
+                Hotel Cellai style mixes valuable antiques and original artworks with an unexpected eclectic contemporary twist. The
+                entire House recalls the ancient ‘Palazzi’ of times past where young European aristocrats lived while discovering the
+                beauty and the artistic mysteries</p>
+            </div>
+
+            <!-- Div 3: Room Booking Form -->
+            <form id="booking-form" action="" method="POST">
+
+                {% csrf_token %}
+
+                <!-- Input Div -->
+                <div class="input-div">
+                    <label for="id_check_in">Check In : </label>
+                    <input type="datetime-local" id="id_check_in" name="check_in">
+                </div>
+
+                <!-- Input Div -->
+                <div class="input-div">
+                    <label for="id_check_out">Check Out : </label>
+                    <input type="datetime-local" id="id_check_out" name="check_out">
+                </div>
+
+                <!-- Input Div -->
+                <div class="input-div">
+                    <button type="submit">Book the Room</button>
+                </div>
+
+            </form>
+
+        </div> <!-- END Room Div -->
+
+    </div> <!-- END Main Content Div -->
+
+</body>
+
+</html>

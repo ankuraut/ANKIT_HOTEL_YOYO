@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOYO</title>
+    <link rel="stylesheet" href="{% static 'yoyo/css/home.css' %}"> <!--my css-->
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRWh6fIOmMsKjD-uVgtnvL1M-QoOrGg22ScA&usqp=CAU" type="image/icon"> <!--my icon-->
+</head>
+<body>
+    <!-- Brand -->
+    <h1 id="brand">YOYO</h1>
+    
+    <!-- Main Content -->
+    <div class="content">
+        {% for room_type, room_url in room_list %}
+        <div class="room">
+            <a href="{{room_url}}">
+                <img
+                    src="https://media-cdn.tripadvisor.com/media/photo-s/11/17/be/4b/single-room-416.jpg">
+    
+                <h2>{{room_type}} YOYO</h2>
+                <p>As our smallest budget rooms, the Compact bedrooms are suited for single occupancy 
+                    or short-stay double occupancy as they have limited space and storage.</p>
+            </a>
+        </div>
+        {% endfor %}
+
+       <!-- <div class="room">
+            <a href="detail.html">
+                <img
+                    src="https://media-cdn.tripadvisor.com/media/photo-s/05/d6/00/06/ac-room-2.jpg">
+    
+                <h2>AC</h2>
+                <p>They are available in Single Deluxe and Double Deluxe variants. Deluxe room is well furnished. Some amenities are
+                attached bathroom, a dressing table, a bedside table, a small writing table, a TV, and a small fridge. The floor is
+                covered with carpet and most suitable for small families.</p>
+            </a>
+        </div>
+    
+        <div class="room">
+            <a href="detail.html">
+                <img
+                    src="https://4.imimg.com/data4/GV/PG/IMOB-60817288/nonac1-500x500.jpg">
+    
+                <h2>NON-AC</h2>
+                <p>A room with the facility of double bed. There are two variants in this type depending upon the size of the bed</p>
+            </a>
+        </div>
+    
+        <div class="room">
+            <a href="detail.html">
+                <img
+                    src="https://cdn.galaxy.tf/unit-media/tc-group/uploads/images/room_photo/001/560/415/big-bed-in-king-room-at-warwick-allerton.jpg">
+    
+                <h2>KING</h2>
+                <p>The room also incorporates a boutique sized sitting area with a flat screen TV, lounge, complimentary WIFI, hand
+                selected artworks, beautiful free standing furniture pieces and Nespresso machine for the coffee enthusiasts.</p>
+            </a>
+        </div>
+    
+        <div class="room">
+            <a href="detail.html">
+                <img
+                    src="https://thewatershs.com/wp-content/uploads/AR259nqq1.jpg">
+    
+                <h2>QUEEN</h2>
+                <p>Queen Rooms have been created to reflect our total dedication to guest comfort which starts with our exclusive,
+                custom-designed, locally made queen size bed.</p>
+            </a>
+        </div>
+
+        <div class="room">
+            <a href="detail.html">
+                <img
+                    src="https://www.digsdigs.com/photos/romantic-bedroom-lighting-ideas-26-554x364.jpg">
+        
+                <h2>COUPLE-FRIENDLY</h2>
+                <p>the privacy of couples and do not judge them. With super-easy check-ins and great services, these hotels are the best
+                option if you want to spend some private time together.</p>
+            </a>
+        </div>-->
+    
+    </div>
+</body>
+</html>

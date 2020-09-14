@@ -1,0 +1,57 @@
+/* Root CSS */
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(127, 161, 196);
+    color: rgb(243, 93, 6);
+    font-family: sans-serif;
+    line-height: 1.25;
+}
+
+/*Brand CSS */
+#brand{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3.5rem;
+    margin: 1.5rem;
+}
+
+/* Main Div */
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%;
+    justify-content: space-evenly;
+}
+
+/* Room Divs */
+.room{
+    max-width:20%;
+    min-width: 200px;
+    text-align: center;
+    border-radius: 1rem;
+    padding:1rem;
+    margin:0.5rem;
+    background-color: rgb(154, 216, 208);
+    flex: 1;
+}
+
+.room:hover{
+    background-color: #dfe95a;
+}
+
+/* Inside Room Divs */
+h2{
+    margin: 0.25rem;
+}
+a{
+    text-decoration: none;
+    color: #5c5858;
+}
+img{
+    max-width:100%;
+}
